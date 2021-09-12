@@ -1,6 +1,6 @@
 package com.bootcamp.books.servlet;
 
-import com.bootcamp.books.model.author.Author;
+import com.bootcamp.books.model.Author;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

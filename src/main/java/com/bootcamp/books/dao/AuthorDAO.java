@@ -1,6 +1,6 @@
 package com.bootcamp.books.dao;
 
-import com.bootcamp.books.model.author.Author;
+import com.bootcamp.books.model.Author;
 
 import java.sql.*;
 import java.util.LinkedList;

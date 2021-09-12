@@ -1,4 +1,4 @@
-package com.bootcamp.books.model.author;
+package com.bootcamp.books.model;
 
 import java.time.LocalDate;
 

@@ -1,7 +1,7 @@
 package com.bootcamp.books.dao;
 
 import com.bootcamp.books.factory.ConnectionFactory;
-import com.bootcamp.books.model.author.Author;
+import com.bootcamp.books.model.Author;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
