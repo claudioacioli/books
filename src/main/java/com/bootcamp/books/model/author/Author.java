@@ -8,6 +8,15 @@ public class Author {
     private String resume;
     private LocalDate birthday;
 
+    public Author(String name, String email, String resume, LocalDate birthday) {
+        this.name = name;
+        this.email = email;
+        this.resume = resume;
+        this.birthday = birthday;
+    }
+
+    public Author () {}
+
     @Override
     public String toString() {
         return "Author{" +
