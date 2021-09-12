@@ -8,8 +8,9 @@ public class ConnectionFactory {
 
     public Connection getConnection () {
         try {
+            Class.forName("org.mariadb.jdbc.Driver");
             return DriverManager.getConnection(getUri());
-        } catch (SQLException ex) {
+        } catch (SQLException | ClassNotFoundException ex) {
             throw new RuntimeException(ex);
         }
     }
