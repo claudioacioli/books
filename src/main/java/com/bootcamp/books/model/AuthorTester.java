@@ -3,6 +3,12 @@ package com.bootcamp.books.model;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+/** This implements a simple test driver to handle Author class
+ *
+ * @author claudio
+ * create on 2021/09/12
+ * @see Author
+ */
 public class AuthorTester {
     public static void main(String[] args) {
         Author author1 = new Author();

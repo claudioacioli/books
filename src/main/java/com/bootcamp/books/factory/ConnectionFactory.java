@@ -1,9 +1,16 @@
 package com.bootcamp.books.factory;
 
+import com.bootcamp.books.model.Author;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/** This return a connections to the database server
+ *
+ * @author claudio
+ * create on 2021/09/12
+ */
 public class ConnectionFactory {
 
     public Connection getConnection () {

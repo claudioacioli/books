@@ -1,11 +1,18 @@
 package com.bootcamp.books.dao;
 
+import com.bootcamp.books.factory.ConnectionFactory;
 import com.bootcamp.books.model.Author;
 
 import java.sql.*;
 import java.util.LinkedList;
 import java.util.List;
 
+/** This handle database author's data
+ *
+ * @author claudio
+ * create on 2021/09/12
+ * @see Author
+ */
 public class AuthorDAO {
     private final Connection connection;
 

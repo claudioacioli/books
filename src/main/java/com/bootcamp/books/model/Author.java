@@ -2,6 +2,11 @@ package com.bootcamp.books.model;
 
 import java.time.LocalDate;
 
+/** This describe an author of books
+ *
+ * @author claudio
+ * create on 2021/09/12
+ */
 public class Author {
     private String name;
     private String email;

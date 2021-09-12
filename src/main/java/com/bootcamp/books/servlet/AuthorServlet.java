@@ -14,6 +14,14 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+/** This creates and show  all authors from the database.
+ *
+ * @author claudio
+ * create on 2021/09/12
+ * @see Author
+ * @see ConnectionFactory
+ * @see AuthorDAO
+ */
 @WebServlet("/")
 public class AuthorServlet extends HttpServlet {
 

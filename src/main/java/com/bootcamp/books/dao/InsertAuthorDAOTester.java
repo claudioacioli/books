@@ -6,6 +6,14 @@ import com.bootcamp.books.model.Author;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+/** This test driver try insert an author on database
+ *
+ * @author claudio
+ * create on 2021/09/12
+ * @see Author
+ * @see ConnectionFactory
+ * @see AuthorDAO
+ */
 public class InsertAuthorDAOTester {
     public static void main(String[] args) {
         try {
