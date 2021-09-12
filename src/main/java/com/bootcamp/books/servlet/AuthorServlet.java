@@ -43,4 +43,23 @@ public class AuthorServlet extends HttpServlet {
         req.setAttribute("authors", authors);
         req.getRequestDispatcher("/WEB-INF/views/author.jsp").forward(req, resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Author author = getAuthorFromForm(req);
+        authors.add(author);
+        resp.sendRedirect(req.getContextPath() + '/');
+    }
+
+    private Author getAuthorFromForm (HttpServletRequest req) {
+        String name = req.getParameter("name");
+        String email = req.getParameter("email");
+        LocalDate birthday = LocalDate.parse(
+                req.getParameter("birthday"),
+                DateTimeFormatter.ofPattern("yyyy-MM-dd")
+        );
+        String resume = req.getParameter("resume");
+
+        return new Author(name, email, resume, birthday);
+    }
 }
