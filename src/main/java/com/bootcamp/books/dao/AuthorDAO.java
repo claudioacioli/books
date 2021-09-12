@@ -2,10 +2,9 @@ package com.bootcamp.books.dao;
 
 import com.bootcamp.books.model.author.Author;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class AuthorDAO {
     private final Connection connection;
@@ -24,6 +23,30 @@ public class AuthorDAO {
             statement.setDate(4, Date.valueOf(author.getBirthday()));
             statement.execute();
             statement.close();
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+    public List<Author> getAll () {
+        try {
+            List<Author> authors = new LinkedList<>();
+            String sql = "select name, email, resume, birthday from authors";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next())
+                authors.add(new Author(
+                    resultSet.getString("name"),
+                    resultSet.getString("email"),
+                    resultSet.getString("resume"),
+                    resultSet.getDate("birthday").toLocalDate()
+                ));
+
+            resultSet.close();
+            statement.close();
+
+            return authors;
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         }
